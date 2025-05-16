@@ -1,5 +1,10 @@
 package com.hisaab.hisaab.Repository;
 
-public class repository {
+import com.hisaab.hisaab.Model.employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface repository extends JpaRepository<employee , Long> {
 
 }
