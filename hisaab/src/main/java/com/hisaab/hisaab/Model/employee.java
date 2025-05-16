@@ -3,13 +3,15 @@ package com.hisaab.hisaab.Model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Id;
 
 @Entity
 public class employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_sequence")
+    @SequenceGenerator(name = "employee_sequence", sequenceName = "employee_id_seq", allocationSize = 1)
     private long id;
     private String name;
     private String phoneNumber;
@@ -17,8 +19,12 @@ public class employee {
     private String assetUsing;
     private String startDate;
     private String salaryTime;
-    public employee(long id, String name, String phoneNumber, String email, String assetUsing, String startDate, String salaryTime) {
-        this.id = id;
+
+    public employee(){
+
+    }
+    public employee( String name, String phoneNumber, String email, String assetUsing, String startDate, String salaryTime) {
+
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
