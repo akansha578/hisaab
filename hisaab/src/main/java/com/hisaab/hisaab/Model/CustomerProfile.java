@@ -22,8 +22,7 @@ public class CustomerProfile {
     private String panCard;
     private String licenseNo;
 
-    public CustomerProfile(long id, String name, String phoneNumber, String email, List<String> assetOwnedId, String adharCard, String panCard, String licenseNo) {
-        this.id = id;
+    public CustomerProfile(String name, String phoneNumber, String email, List<String> assetOwnedId, String adharCard, String panCard, String licenseNo) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
