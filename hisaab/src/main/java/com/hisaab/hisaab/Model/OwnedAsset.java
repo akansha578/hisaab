@@ -1,7 +1,6 @@
-package com.hisaab.hisaab.model;
+package com.hisaab.hisaab.Model;
 
 
-import com.hisaab.hisaab.model.DocumentCharacterstics;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,14 +15,14 @@ public class OwnedAsset {
     @SequenceGenerator(name = "OwnedAsset_sequence", sequenceName = "OwnedAsset_id_seq", allocationSize = 1)
     private long id;
     private String assetName;
-    private List<DocumentCharacterstics> documents;
+    private List<String> documentsId;
     private String earnings;
     private List<String> assetOwnedId;
 
-    public OwnedAsset(long id, String assetName, List<DocumentCharacterstics> documents, String earnings, List<String> assetOwnedId) {
+    public OwnedAsset(long id, String assetName, List<String> documentsId, String earnings, List<String> assetOwnedId) {
         this.id = id;
         this.assetName = assetName;
-        this.documents = documents;
+        this.documentsId = documentsId;
         this.earnings = earnings;
         this.assetOwnedId = assetOwnedId;
     }
@@ -44,12 +43,12 @@ public class OwnedAsset {
         this.assetName = assetName;
     }
 
-    public List<DocumentCharacterstics> getDocuments() {
-        return documents;
+    public List<String> getdocumentsId() {
+        return documentsId;
     }
 
-    public void setDocuments(List<DocumentCharacterstics> documents) {
-        this.documents = documents;
+    public void setdocumentsId(List<String> documentsId) {
+        this.documentsId = documentsId;
     }
 
     public String getEarnings() {

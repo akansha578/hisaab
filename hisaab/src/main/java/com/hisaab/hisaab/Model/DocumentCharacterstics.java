@@ -1,4 +1,4 @@
-package com.hisaab.hisaab.model;
+package com.hisaab.hisaab.Model;
 
 public class DocumentCharacterstics {
 
