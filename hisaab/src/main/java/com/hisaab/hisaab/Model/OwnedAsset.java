@@ -1,4 +1,4 @@
-package com.hisaab.hisaab.Model;
+package com.hisaab.hisaab.model;
 
 
 import com.hisaab.hisaab.model.DocumentCharacterstics;
